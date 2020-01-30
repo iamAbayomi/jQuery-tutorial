@@ -21,7 +21,7 @@
                 width: 60px;
                 height: 40px;
             }
-            .trash:hover {
+            .trash:hover, .trash_hover {
                 background-position: 0 -61px ;
             }
         </style>
@@ -31,7 +31,10 @@
         <script>
             $(document).ready(function() {
                     $('.favs li').draggable({
-                            helper: 'clone'
+                            helper: 'clone',
+                            drag: function (){
+                                $('.trash').addClass('trash_hover');
+                            }
                     });// End draggable 
                     
 
