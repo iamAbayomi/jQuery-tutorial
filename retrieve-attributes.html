@@ -20,10 +20,20 @@
         <script>
             $(document).ready(function() {
                 $(document).on('click', '.movie_list', function(){
-                    $(this).remove();
-                    $id = $(this).attr('id');
-                    console.log($id);
-                    console.log("Hello I am using console.log");
+                  
+                    $id = $(this).attr('id').split('_');
+                    $id = $id[1];
+                    $list = $(this).closest('div').attr('class');
+                    console.log($list);
+
+                    if($list == "favs"){
+                        $addList = ".non_favs";
+                    }else{
+                        $addList = ".favs";
+                    }
+                    $(this).remove();  
+                
+                    $($addList + ' ul').append("<li class='movie_list' id='movie_" + $id + "'>Movie " + $id + "</li>");
                 });
 
             }); // End doc ready
