@@ -1,8 +1,10 @@
 # A tutorial on using JQuery 
 The tutorial is based on interactive elements with jQuery
 
-  * Drag and Drop Functionality
+## Topics Covered 
+  * jQuery Syntax  
   * Clicking Elements
-  * Adding and Removing Classes
-   
+  * Adding and Removing Classes  
+  * Drag and Drop Functionality
+  
     
